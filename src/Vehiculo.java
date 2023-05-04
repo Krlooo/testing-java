@@ -1,16 +1,11 @@
 public abstract class Vehiculo {
     int puerta;
     String color;
-    Rueda[] ruedas;
+    Rueda[] ruedas= {new Rueda(),new Rueda(),new Rueda(),new Rueda()};
 
-    public Vehiculo(int puerta, String color, int numRuedas) {
+    public Vehiculo(int puerta, String color) {
         this.setPuerta(puerta);
         this.setColor(color);
-        for(int i = 0; i <= numRuedas; i++){
-            this.ruedas[i]=new Rueda();
-
-
-        }
     }
     public Vehiculo() {
         this.setPuerta(0);
@@ -42,6 +37,8 @@ public abstract class Vehiculo {
     }
 
     public void estadoRuedas(){
-
+        for(int i = 0; i<ruedas.length;i++ ){
+            System.out.println("Rueda "+i+ "está: "+ ruedas[i].estado);
+        }
     }
 }

@@ -2,12 +2,11 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        Coche mercedes = new Coche(5, "Rojo", 5);
+        Coche mercedes = new Coche(5, "Rojo");
         mercedes.escribi();
-        mercedes.ruedas[0].pinchar();
-        if(mercedes.esCoche()){
-            System.out.println("Claaaaro");
-        }
+        mercedes.estadoRuedas();
+        mercedes.ruedas[1].pinchar();
+        mercedes.estadoRuedas();
     }
 
 }
